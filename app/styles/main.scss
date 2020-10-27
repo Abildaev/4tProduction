@@ -1,0 +1,16 @@
+@import "parts/fonts";
+@import "parts/variables";
+@import "parts/media";
+@import "parts/default";
+@import "../../node_modules/swiper/css/swiper.min";
+
+
+@import "components/header";
+@import "components/mainPage/banner";
+@import "components/mainPage/about";
+@import "components/mainPage/services";
+@import "components/mainPage/portfolio";
+@import "components/mainPage/partners";
+@import "components/mainPage/contacts";
+@import "components/mainPage/pluginContacts";
+@import "components/mainPage/footer";

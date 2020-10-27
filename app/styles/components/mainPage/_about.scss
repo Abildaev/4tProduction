@@ -1,0 +1,41 @@
+.about {
+  padding-top: rem(130px);
+  box-sizing: border-box;
+
+  &__textWrapper {
+    padding: rem(60px) 0;
+  }
+
+  &__title {
+    width: 70% !important;
+    margin-bottom: rem(40px) !important;
+  }
+
+  &__descrip {
+    color: $subtitleColor;
+    padding-left: rem(40px);
+    line-height: rem(24px);
+    box-sizing: border-box;
+    margin-bottom: rem(50px);
+  }
+
+  &__btnPortfolio {
+    transition: ease-out 0.3s;
+    background-color: rgba($color: $mainColor, $alpha: 1.0);
+    color: $wc;
+    box-sizing: border-box;
+    border: 2px solid rgba($color: $mainColor, $alpha: 1.0);
+    padding: rem(12px) rem(32px);
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-left: rem(40px);
+   
+
+    &:hover {
+      background-color: rgba($color: $mainColor, $alpha: 0);
+      color: $mainColor;
+    }
+
+
+  }
+}

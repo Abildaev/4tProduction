@@ -1,0 +1,116 @@
+.services {
+
+  &__service {
+    transition: 0.3s ease-in;
+    margin-top: rem(42px);
+    min-height: rem(460px);
+    z-index: 0;
+    position: relative;
+    box-sizing: border-box;
+    padding: rem(85px) rem(35px);
+    background-color: $secondBodyColor;
+
+    &.addHover {
+      background-color: #202020;
+    }
+
+    & .services__link {
+      transition: ease-in 0.3s;
+      position: absolute;
+      z-index: 4;
+      bottom: rem(30px);
+      right: rem(30px);
+      color: $mainColor;
+
+
+      &:hover {
+        color: $wc;
+        right: rem(25px);
+      }
+
+      & i:before {
+        transform: translate(0px, 1px);
+      }
+
+    }
+
+    & h3,
+    p,
+    .services__icon {
+      transition: 0.4s ease-in;
+
+      &.addHover {
+        opacity: 0;
+      }
+    }
+
+    & h3 {
+
+      color: $wc;
+      font-size: rem(16px);
+      text-transform: uppercase;
+      margin-bottom: rem(20px);
+      font-weight: 800;
+
+
+    }
+
+    & p {
+      color: $subtitleColor;
+      font-size: rem(16px);
+    }
+
+    & img {
+      transition: 0.3s ease-out;
+      max-width: 65%;
+      z-index: -1;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.03;
+      filter: invert(100%); 
+
+      &.addHover {
+        transition: 0.1s ease-out;
+        opacity: 1;
+      }
+    }
+
+    & .services__icon {
+      position: absolute;
+      top: rem(-42px);
+      right: rem(35px);
+      width: rem(85px);
+      height: rem(85px);
+      background-color: $mainColor;
+      border-radius: 50%;
+      z-index: 2;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: rem(100px);
+        height: rem(100px);
+        background-color: rgba($color: $mainColor, $alpha: 0.34);
+        border-radius: 50%;
+        z-index: 1;
+
+      }
+
+      & .services__icon-img {
+        max-width: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        filter: sepia(100%); 
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        z-index: 3;
+      }
+    }
+  }
+}

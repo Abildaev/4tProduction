@@ -1,0 +1,113 @@
+.partners {
+  width: 100%;
+  position: relative;
+
+  &__partner {
+    cursor: pointer;
+    width: 33.2%;
+    min-height: rem(210px);
+    background-color: $bodyColor;
+    margin-bottom: rem(2px);
+
+    &:hover {
+      & img {
+        filter: grayscale(0%);
+      }
+    }
+
+    & img {
+      transition: 0.3s ease-out;
+      max-width: rem(210px);
+      filter: grayscale(100%);
+    }
+  }
+
+  & .swiper-button {
+    transition: 0.3s ease-in;
+    outline: none;
+    width: rem(40px);
+    height: rem(40px);
+    border: 2px solid rgba($wc, 0.2);
+    box-sizing: border-box;
+    border-radius: 50%;
+
+    &:after {
+      font-size: rem(20px);
+      color: $wc;
+    }
+
+    &:hover {
+      border: 2px solid rgba($wc, 1);
+    }
+  }
+}
+
+.partners-button-prev {
+  left: 40px;
+  right: auto;
+
+  &:after {
+    content: 'prev';
+  }
+}
+
+.partners-button-next {
+  left: auto;
+  right: 40px;
+
+  &:after {
+    content: 'next';
+  }
+
+
+}
+
+
+
+.partners-button-next,
+.partners-button-prev {
+  position: absolute;
+  top: 61%;
+  width: calc(var(--swiper-navigation-size)/ 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(-1 * var(--swiper-navigation-size)/ 2);
+  z-index: 10;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+
+  &:after {
+
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none !important;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1;
+  }
+
+  &.swiper-button-disabled {
+    opacity: .35;
+    cursor: auto;
+    pointer-events: none;
+  }
+}
+
+// .partners-button-next {
+//   font-family: swiper-icons;
+//   font-size: var(--swiper-navigation-size);
+//   text-transform: none !important;
+//   letter-spacing: 0;
+//   text-transform: none;
+//   font-variant: initial;
+//   line-height: 1;
+// }

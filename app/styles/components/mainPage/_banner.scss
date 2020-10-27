@@ -1,0 +1,243 @@
+.banner {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: rem(100px) 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+
+
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #141414;
+    opacity: 0.80;
+    z-index: 0;
+  }
+
+  &__art {
+    width: 46%;
+    position: absolute;
+    z-index: 2;
+    top: 15%;
+    right: 2%;
+
+    & img {
+      width: 100%;
+
+      max-width: rem(710px);
+    }
+  }
+
+  &__img {
+    @include md {
+      min-width: rem(1920px);
+      height: 100%;
+    }
+
+  }
+
+  &__sliders {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 0;
+    bottom: 0;
+  }
+
+  & .swiper-pagination {
+    position: relative;
+    text-align: left;
+  }
+
+  & .swiper-pagination-bullet {
+    width: rem(13px);
+    height: rem(13px);
+    background-color: rgba($wc, 0.5);
+
+
+  }
+
+  & .swiper-container-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 0;
+    left: 0;
+  }
+
+  & .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 rem(15px) 0 0;
+  }
+
+  & .swiper-pagination-bullet-active {
+    background-color: $mainColor;
+  }
+
+  & .swiper-button-prev {
+    left: 40px;
+    right: auto;
+  }
+  & .swiper-button-next {
+    left: auto;
+    right: 40px;
+  }
+
+  & .swiper-button {
+    transition: 0.3s ease-in;
+    outline: none;
+    width: rem(40px);
+    height: rem(40px);
+    border: 2px solid rgba($wc, 0.2);
+    box-sizing: border-box;
+    border-radius: 50%;
+
+    &:after {
+      font-size: rem(20px);
+      color: $wc;
+    }
+
+    &:hover {
+      border: 2px solid rgba($wc, 1);
+    }
+  }
+
+  &__texts {
+    padding: rem(40px) 0;
+
+    @include sm {
+      padding: rem(20px) 0;
+    }
+
+    & p {
+      width: 90%;
+      margin-top: rem(20px);
+      font-size: rem(20px);
+      color: $subtitleColor;
+      line-height: rem(28px);
+
+      @include sm {
+        font-size: rem(16px);
+        line-height: rem(24px);
+      }
+
+      @include xs {
+        margin-top: rem(10px);
+      }
+    }
+  }
+
+
+
+  &__title {
+    font-family: $titleFont;
+    text-transform: uppercase;
+    line-height: rem(72px);
+    color: $titleColor;
+    font-size: rem(56px);
+
+    @include md {
+      font-size: rem(30px);
+    }
+
+    @include xs {
+      font-size: rem(24px);
+    }
+  }
+
+
+
+  &__btn {
+    transition: ease-out 0.3s;
+    position: relative;
+    z-index: 3;
+    box-sizing: border-box;
+    padding: rem(12px) rem(32px);
+    text-transform: uppercase;
+    border: 2px solid $mainColor;
+    background: rgba($mainColor, 0);
+    color: $mainColor;
+    font-weight: 800;
+    margin-right: rem(30px);
+
+    &:last-child {
+      border: 2px solid rgba($mainColor, 0);
+      color: $wc;
+      display: inline-flex;
+      align-items: center;
+      padding: 0;
+      margin-right: 0;
+
+      &:hover {
+        color: $wc;
+        border: 2px solid rgba($mainColor, 0);
+        background: rgba($mainColor, 0);
+        color: $mainColor;
+
+        & span:after {
+          height: rem(30px);
+          width: rem(30px);
+        }
+      }
+
+      & span {
+
+        display: inline-block;
+        position: relative;
+        height: rem(30px);
+        width: rem(30px);
+        box-sizing: border-box;
+        border-radius: 50%;
+        margin-right: rem(12px);
+        background-color: $mainColor;
+
+        &:after {
+          transition: 0.3s ease-in;
+          content: "";
+          position: absolute;
+          border-radius: 50%;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          height: rem(35px);
+          width: rem(35px);
+          background-color: $mainColor;
+          opacity: 0.4;
+        }
+
+        & i {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          color: $wc;
+        }
+      }
+    }
+
+    @include md {
+      padding: rem(10px) rem(20px);
+    }
+
+    &:hover {
+      color: $wc;
+      border: 2px solid $mainColor;
+      background: rgba($mainColor, 1);
+    }
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: rem(100px);
+  }
+
+}

@@ -1,0 +1,62 @@
+.footer {
+  padding: rem(70px) 0;
+  background-color: $footerColor;
+
+
+  &__nav {
+
+    & li:first-child {
+      width: 100%;
+      color: $wc;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: rem(20px);
+    }
+
+    & li {
+      margin-bottom: rem(8px);
+
+      & a {
+        display: inline-flex;
+        align-items: center;
+        transition: 0.3s ease-out;
+        color: $subtitleColor;
+        font-weight: 400;
+
+        & img {
+          width: rem(20px);
+          filter: invert(100%);
+          margin-right: rem(12px);
+        }
+
+        &:hover {
+          color: $mainColor;
+        }
+      }
+    }
+
+    
+  }
+}
+
+.right {
+  padding: rem(20px) 0;
+  background-color: $footerColor;
+
+  & span {
+    color: #505050;
+  }
+
+  & a {
+    transition: 0.2s ease-out;
+    color: $subtitleColor;
+
+    &:hover {
+      color: $wc;
+    }
+  }
+
+  & span, a {
+    font-size: rem(14px);
+  }
+}
