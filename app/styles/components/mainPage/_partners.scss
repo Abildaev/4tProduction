@@ -4,10 +4,8 @@
 
   &__partner {
     cursor: pointer;
-    width: 33.2%;
     min-height: rem(210px);
     background-color: $bodyColor;
-    margin-bottom: rem(2px);
 
     &:hover {
       & img {
@@ -22,6 +20,8 @@
     }
   }
 
+
+
   & .swiper-button {
     transition: 0.3s ease-in;
     outline: none;
@@ -31,9 +31,17 @@
     box-sizing: border-box;
     border-radius: 50%;
 
+    @include sm {
+      width: rem(30px);
+      height: rem(30px);
+    }
+
     &:after {
       font-size: rem(20px);
       color: $wc;
+      @include sm {
+        font-size: rem(16px);
+      }
     }
 
     &:hover {
@@ -46,6 +54,14 @@
   left: 40px;
   right: auto;
 
+  @include lg {
+    left: 10px;
+  }
+
+  @include sm {
+    left: 2px;
+  }
+
   &:after {
     content: 'prev';
   }
@@ -54,6 +70,14 @@
 .partners-button-next {
   left: auto;
   right: 40px;
+
+  @include lg {
+    right: 10px;
+  }
+
+  @include sm {
+    right: 2px;
+  }
 
   &:after {
     content: 'next';
@@ -71,7 +95,7 @@
   width: calc(var(--swiper-navigation-size)/ 44 * 27);
   height: var(--swiper-navigation-size);
   margin-top: calc(-1 * var(--swiper-navigation-size)/ 2);
-  z-index: 10;
+  z-index: 1;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,6 +107,14 @@
   -ms-flex-pack: center;
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
+
+  @include md {
+    top: 57%;
+  }
+
+  @include sm {
+    top: 62%;
+  }
 
   &:after {
 
@@ -101,13 +133,3 @@
     pointer-events: none;
   }
 }
-
-// .partners-button-next {
-//   font-family: swiper-icons;
-//   font-size: var(--swiper-navigation-size);
-//   text-transform: none !important;
-//   letter-spacing: 0;
-//   text-transform: none;
-//   font-variant: initial;
-//   line-height: 1;
-// }

@@ -1,0 +1,68 @@
+.contactsPage {
+  &__nav {
+
+    & li:nth-child(2) {
+      text-align: center;  
+      
+      @include sm {
+        text-align: right;  
+      }
+
+      @include xs {
+        text-align: left;  
+      }
+    }
+
+    & li:last-child {
+      text-align: right;    
+      @include sm {
+        text-align: left;  
+      }
+    }
+
+    & li {
+      margin-bottom: rem(8px);
+
+      & a {
+        display: inline-flex;
+        align-items: center;
+        transition: 0.3s ease-out;
+        color: $subtitleColor;
+        font-weight: 400;
+
+        & img {
+          width: rem(20px);
+          filter: invert(100%);
+          margin-right: rem(12px);
+        }
+
+        &:hover {
+          color: $mainColor;
+        }
+      }
+
+      @include sm {
+        margin-bottom: rem(5px);
+      }
+    }
+  }
+
+
+  &__form {
+    padding: rem(70px) 0 rem(130px);
+
+    @include md {
+      padding: rem(40px) 0 rem(70px);
+    }
+  
+    @include xs {
+      padding: rem(20px) 0 rem(50px);
+    }
+  }
+
+  & textarea {
+    min-height: rem(158px);
+  }
+}
+
+

@@ -1,6 +1,8 @@
+
 .header {
+  transition: 0.1s ease-out;
   z-index: 5;
-  position: absolute;
+  position: fixed;
   width: 100%;
   left: 0;
   top: 0;
@@ -8,10 +10,159 @@
   box-sizing: border-box;
   border-bottom: 1px solid rgba($wc, 0.1);
 
+  &__fixed {
+    background-color: $bodyColor;
+  }
+
+  @include sm {
+    padding: 10px;
+  }
+
+
+  &__menu {
+    @include md {
+      min-height: rem(340px);
+      justify-content: center;
+      transition: 0.2s ease-out;
+      display: block;
+      top: 0;
+      position: fixed;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      z-index: 11;
+      background-color: $bodyColor;
+      padding: rem(50px) rem(60px);
+      box-sizing: border-box;
+      overflow-y: auto;
+
+      &.changeMenu {
+        left: 0;
+      }
+    }
+
+
+
+    & .header__social {
+      display: none;
+
+      @include md {
+        display: inline-flex;
+        width: rem(50px);
+        height: rem(50px);
+        margin-right: rem(20px);
+
+        & i {
+          margin-top: rem(2px);
+          transition: 0.3s ease-in;
+          font-size: rem(20px);
+          color: #9c9c9c;
+
+        }
+      }
+
+      @include sm {
+        width: rem(35px);
+        height: rem(35px);
+
+
+        & i {
+          margin-top: rem(2px);
+          transition: 0.3s ease-in;
+          font-size: rem(14px);
+          color: #9c9c9c;
+
+        }
+      }
+
+    }
+  }
+
+  &__open-menu {
+    display: none;
+
+    @include md {
+      cursor: pointer;
+      margin-left: auto;
+      display: block;
+      width: rem(35px);
+      height: rem(30px);
+
+
+      & span {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: rem(3px);
+        background-color: $wc;
+        border-radius: rem(5px);
+
+        &:after,
+        &:before {
+          content: ' ';
+          border-radius: rem(5px);
+          position: absolute;
+          width: 100%;
+          height: rem(3px);
+          top: 0;
+          left: 0;
+          background-color: $wc;
+        }
+
+        &:after {
+          transform: translateY(rem(13px));
+        }
+
+        &:before {
+          transform: translateY(rem(26px));
+        }
+      }
+    }
+
+    @include sm {
+      width: rem(30px);
+      height: rem(25px);
+
+      & span {
+
+        &:after {
+          transform: translateY(rem(10px));
+        }
+
+        &:before {
+          transform: translateY(rem(20px));
+        }
+
+      }
+    }
+  }
+
+
+  &__close-menu {
+
+    @include md {
+      position: absolute;
+      right: rem(20px);
+      top: rem(30px);
+      color: $wc;
+
+      & i {
+        font-size: rem(40px);
+      }
+    }
+  }
 
   &__logo {
     & img {
-      width: rem(225px);
+      max-width: rem(225px);
+
+      @include md {
+        max-width: rem(200px);
+      }
+
+      @include xs {
+        max-width: rem(225px);
+      }
     }
   }
 
@@ -20,14 +171,32 @@
     text-transform: uppercase;
     color: $navColor;
     font-size: rem(14px);
+
+    @include md {
+      font-size: rem(30px);
+      display: inline-block;
+      margin-bottom: rem(10px);
+    }
+
+    @include sm {
+      font-size: rem(24px);
+      display: inline-block;
+      margin-bottom: rem(10px);
+    }
+
+
     &:hover {
-      
-      
       color: $mainColor;
     }
+
     &.nav__active {
       position: relative;
       color: $mainColor;
+
+      @include md {
+        font-weight: 800;
+      }
+
       &:after {
         content: " ";
         position: absolute;
@@ -37,8 +206,12 @@
         height: rem(3px);
         border-radius: 10px;
         background-color: $mainColor;
+
+        @include md {
+          display: none;
+        }
       }
-      
+
     }
   }
 
@@ -51,10 +224,10 @@
     width: rem(25px);
     height: rem(25px);
     background-color: rgba($color: #887e7b, $alpha: 0.2);
+
     &:hover {
       & i {
         color: $wc;
-        
       }
     }
 

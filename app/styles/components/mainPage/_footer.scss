@@ -2,14 +2,36 @@
   padding: rem(70px) 0;
   background-color: $footerColor;
 
+  @include md {
+    padding: rem(50px) 0;
+  }
+
+  @include xs {
+    padding: rem(40px) 0;
+  }
+
 
   &__nav {
 
+    
     & li:first-child {
       width: 100%;
       color: $wc;
       text-transform: uppercase;
       font-weight: 600;
+      margin-bottom: rem(20px);
+
+      @include md {
+        margin-bottom: rem(15px);
+      }
+
+      
+    }
+
+    @include sm {
+      margin-bottom: rem(25px);
+    }
+    @include xs {
       margin-bottom: rem(20px);
     }
 
@@ -33,6 +55,10 @@
           color: $mainColor;
         }
       }
+
+      @include sm {
+        margin-bottom: rem(5px);
+      }
     }
 
     
@@ -45,6 +71,10 @@
 
   & span {
     color: #505050;
+
+    @include xs {
+      margin-bottom: rem(5px);
+    }
   }
 
   & a {

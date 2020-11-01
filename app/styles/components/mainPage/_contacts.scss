@@ -2,6 +2,32 @@
   padding-top: rem(130px);
   box-sizing: border-box;
 
+  @include md {
+    padding: rem(70px) 0;
+  }
+  @include xs {
+    padding: rem(50px) 0;
+  }
+
+
+
+  & img {
+    @include lg {
+      max-width: rem(350px);
+    }
+
+    @include md {
+      position: absolute;
+      bottom: rem(-70px);
+      right: rem(2px);
+      max-width: rem(260px);
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
   &__send {
     width: 30%;
     min-width: rem(165px);
@@ -14,7 +40,16 @@
     text-transform: uppercase;
     font-weight: 800;
     margin-left: rem(40px);
-   
+
+    @include lg {
+      font-size: rem(15px);
+    }
+
+    @include xs {
+      margin: 0 auto;
+      width: 80%;
+    }
+
 
     &:hover {
       background-color: rgba($color: $mainColor, $alpha: 0);
@@ -38,6 +73,10 @@
 
     & input {
       width: 47.5%;
+
+      @include xs {
+        width: 100%;
+      }
     }
 
     & input,
@@ -48,6 +87,14 @@
       padding: rem(14px) rem(21px);
       background-color: rgba($color: $wc, $alpha: 0);
       margin-bottom: rem(50px);
+
+      @include sm {
+        margin-bottom: rem(40px);
+      }
+
+      @include xs {
+        margin-bottom: rem(30px);
+      }
 
       &::-webkit-input-placeholder {
         color: #3c3c3c;
@@ -75,6 +122,11 @@
 
   &__file-wraper {
     position: relative;
+
+    @include xs {
+      width: 100%;
+      margin-bottom: rem(40px);
+    }
   }
 
   &__file {
@@ -86,6 +138,9 @@
   }
 
   &__file-btn {
+    @include xs {
+      width: 100%;
+    }
 
     display: inline-flex;
     position: relative;
@@ -94,6 +149,7 @@
     font-size: rem(16px);
     font-weight: 600;
     color: #3c3c3c;
+
 
     &:hover {
       & span {
@@ -115,6 +171,9 @@
       border-top: 1px solid $borderColor;
       border-bottom: 1px solid $borderColor;
       padding: rem(12px) rem(24px);
+      @include xs {
+        width: 100%;
+      }
     }
 
     & span:last-child {

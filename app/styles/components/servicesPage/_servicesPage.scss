@@ -1,0 +1,171 @@
+.servicesPage__services {
+
+  & .servicesPage__wrap:nth-child(even) {
+
+    & .services__service {
+      background-color: $bodyColor;
+    }
+
+    & .servicesPage__service {
+      padding-right: rem(70px);
+
+      @include md {
+        padding: 0;
+      }
+
+      @include sm {
+        padding: 0 rem(15px);
+      }
+    }
+
+    & .servicesPage__number {
+      position: absolute;
+      left: rem(10px);
+      top: rem(-160px);
+      text-shadow: $mainColor 1px 1px 0, $mainColor -1px -1px 0,
+        $mainColor -1px 1px 0, $mainColor 1px -1px 0;
+      font-size: rem(100px);
+      color: $secondBodyColor;
+      font-weight: 1000;
+
+      @include md {
+        top: rem(-60px);
+        font-size: rem(70px);
+        left: auto;
+        right: rem(10px);
+      }
+
+      @include sm {
+        right: rem(15px);
+      }
+    }
+
+  }
+
+  & .servicesPage__wrap:nth-child(odd) {
+
+
+    & .servicesPage__service {
+      padding-left: rem(70px);
+
+      @include md {
+        padding: 0;
+      }
+
+      @include sm {
+        padding: 0 rem(15px);
+      }
+    }
+
+
+    & .servicesPage__number {
+      position: absolute;
+      right: rem(10px);
+      top: rem(-160px);
+      text-shadow: $mainColor 1px 1px 0, $mainColor -1px -1px 0,
+        $mainColor -1px 1px 0, $mainColor 1px -1px 0;
+      font-size: rem(100px);
+      color: $bodyColor;
+      font-weight: 1000;
+
+      @include md {
+        top: rem(-60px);
+        font-size: rem(70px);
+      }
+
+      @include sm {
+        right: rem(15px);
+      }
+    }
+  }
+
+
+}
+
+
+
+
+.servicesPage {
+
+
+  & .services__service {
+    margin-top: 0;
+
+    @include md {
+      min-height: rem(360px);
+    }
+
+
+
+    & img {
+      opacity: 0.4;
+
+      @include xs {
+        max-width: 40%;
+      }
+    }
+  }
+
+  &__service {
+
+
+    @include sm {
+      margin-top: rem(80px);
+
+    }
+
+    & h3 {
+      color: $wc;
+      font-size: rem(24px);
+      text-transform: uppercase;
+      margin-bottom: rem(20px);
+      font-weight: 800;
+
+      @include md {
+        font-size: rem(18px);
+      }
+
+      @include sm {
+        width: 50%;
+        font-size: rem(16px);
+      }
+    }
+
+    & p {
+      color: $subtitleColor;
+
+      @include md {
+        font-size: rem(16px);
+      }
+
+    }
+  }
+
+
+  &__portfolioBtn {
+
+    & span {
+      text-shadow: $mainColor 1px 1px 0, $mainColor -1px -1px 0,
+        $mainColor -1px 1px 0, $mainColor 1px -1px 0;
+      font-size: rem(50px);
+      text-transform: uppercase;
+      color: $bodyColor;
+      font-weight: 1000;
+
+      @include md {
+        font-size: rem(36px);
+      }
+    }
+
+    & a {
+      transition: 0.3s ease-out;
+      color: $wc;
+      text-decoration: underline !important;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+}

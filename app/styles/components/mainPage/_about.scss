@@ -1,14 +1,59 @@
 .about {
   padding-top: rem(130px);
   box-sizing: border-box;
+  @include md {
+    padding: rem(70px) 0;
+  }
+
+  @include xs {
+    padding: rem(50px) 0;
+  }
+
+ 
+
+  & img {
+    @include lg {
+      max-width: rem(350px);
+    }
+
+    @include md {
+      transform: translateY(rem(133px));
+      max-width: rem(260px);
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
 
   &__textWrapper {
     padding: rem(60px) 0;
+
+    @include lg {
+      padding: 0;
+    }
   }
 
   &__title {
     width: 70% !important;
     margin-bottom: rem(40px) !important;
+
+    @include lg {
+      margin-bottom: rem(30px) !important;
+    }
+
+    @include md {
+      width: 100% !important;
+      margin-bottom: rem(20px) !important;
+    }
+
+    @include sm {
+      width: 70% !important;
+    }
+
+    @include xs {
+      width: 100% !important;
+    }
   }
 
   &__descrip {
@@ -17,6 +62,18 @@
     line-height: rem(24px);
     box-sizing: border-box;
     margin-bottom: rem(50px);
+
+    @include lg {
+      font-size: rem(16px);
+    }
+
+    @include md {
+      margin-bottom: rem(35px);
+    }
+
+    @include sm {
+      padding-left: 0;
+    }
   }
 
   &__btnPortfolio {
@@ -29,6 +86,14 @@
     text-transform: uppercase;
     font-weight: 800;
     margin-left: rem(40px);
+
+    @include lg  {
+      font-size: rem(15px);
+    }
+
+    @include sm {
+      margin-left: 0;
+    }
    
 
     &:hover {
