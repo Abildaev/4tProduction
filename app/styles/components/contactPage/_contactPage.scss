@@ -58,10 +58,14 @@
     @include xs {
       padding: rem(20px) 0 rem(50px);
     }
+
+    & #company__name {
+      width: 100%;
+    }
   }
 
   & textarea {
-    min-height: rem(158px);
+    min-height: rem(263px);
   }
 }
 

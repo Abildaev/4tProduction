@@ -1,0 +1,111 @@
+.vacancyPage {
+  padding: 0 0 rem(100px) 0;
+
+  @include md {
+    padding: rem(40px) 0;
+  }
+
+  @include xs {
+    padding: rem(20px) 0;
+  }
+
+  &.vacancyPage__one {
+    padding: 0 0 rem(130px) 0;
+
+    @include md {
+      padding: rem(70px) 0;
+    }
+
+    @include xs {
+      padding: rem(50px) 0;
+    }
+  }
+
+
+  &__vacancy {
+    padding: rem(50px) rem(35px);
+    box-sizing: border-box;
+    position: relative;
+    background-color: $secondBodyColor;
+    width: 100%;
+    min-height: rem(330px);
+    margin-bottom: rem(30px);
+
+
+    & h3 {
+      text-transform: uppercase;
+      font-size: rem(20px);
+      font-weight: 600;
+      color: $wc;
+      margin-bottom: rem(25px);
+    }
+
+
+
+    & p {
+      color: $subtitleColor;
+      font-size: rem(16px);
+    }
+
+
+
+    & .services__link {
+      transition: ease-in 0.3s;
+      position: absolute;
+      z-index: 4;
+      bottom: rem(30px);
+      right: rem(30px);
+      color: $mainColor;
+
+
+      &:hover {
+        color: $wc;
+        right: rem(25px);
+      }
+
+      & i:before {
+        transform: translate(0px, 1px);
+      }
+
+    }
+  }
+
+  &__calendar {
+    display: inline-block;
+    color: $mainColor;
+    margin-bottom: rem(25px);
+
+    & i {
+      margin-right: rem(5px);
+    }
+  }
+
+  &__contact {
+
+
+    & li {
+      text-align: left !important;
+    }
+  }
+
+
+  &__descrip {
+
+    & p,
+    li,
+    a {
+      color: $subtitleColor;
+
+    }
+
+    margin-bottom: rem(70px);
+
+    @include md {
+      margin-bottom: rem(40px);
+    }
+
+    @include xs {
+      padding: rem(20px);
+    }
+  }
+}
