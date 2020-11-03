@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
   
     const distanceY = $(window).scrollTop();
     if (distanceY >= 10) {
-      $(".header").addClass("header__fixed");
+      $('.header').addClass('header__fixed');
     }
 
     else {
-      $(".header").removeClass("header__fixed");
+      $('.header').removeClass('header__fixed');
     }
 });
 
